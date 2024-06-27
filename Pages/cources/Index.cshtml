@@ -1,0 +1,119 @@
+﻿@page
+@model NEXSUS.Pages.cources.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <style>
+        h1 {
+            font-size: 25px;
+            color: orange;
+            font-family: Arial;
+            font-weight: 500;
+        }
+
+        p a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .button {
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: 400;
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+            .button a {
+                color: black;
+                font-weight: 400;
+                font-size: 15px;
+            }
+
+            .button:hover {
+                background-color: white;
+                color: black;
+                border: 1px solid orange;
+            }
+
+                .button:hover .button a {
+                    color: black;
+                }
+    </style>
+</head>
+
+<h1>Cource Details</h1>
+
+<p>
+    <a asp-page="Create">Add new cource</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].LecturerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].JoinedYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course[0].AcademicLevel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Course) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LecturerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JoinedYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcademicLevel)
+            </td>
+            <td>
+
+                    <button class="button"><a asp-page="./Edit" asp-route-id="@item.CourseId">Edit</a></button>
+                    <button class="button">
+                        <a asp-page="./Details" asp-route-id="@item.CourseId">Details</a>
+                    </button>
+                    <button class="button"> <a asp-page="./Delete" asp-route-id="@item.CourseId">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

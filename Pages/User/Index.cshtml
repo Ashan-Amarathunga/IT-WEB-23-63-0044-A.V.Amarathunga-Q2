@@ -1,0 +1,93 @@
+﻿@page
+@model NEXSUS.Pages.User.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <style>
+        h1 {
+            font-size: 25px;
+            color: orange;
+            font-family: Arial;
+            font-weight: 500;
+        }
+
+        p a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .button {
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: 400;
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+            .button a {
+                color: black;
+                font-weight: 400;
+                font-size: 15px;
+            }
+
+            .button:hover {
+                background-color: white;
+                color: black;
+                border: 1px solid orange;
+            }
+
+                .button:hover .button a {
+                    color: black;
+                }
+    </style>
+</head>
+
+<h1>Students Details</h1>
+
+<p>
+    <a asp-page="Create">Add new information</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Student) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+ 
+                    <button class="button"><a asp-page="./Edit" asp-route-id="@item.studentID">Edit</a></button>
+                    <button class="button"> <a asp-page="./Details" asp-route-id="@item.studentID">Details</a> |</button>
+                    <button class="button"> <a asp-page="./Delete" asp-route-id="@item.studentID">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

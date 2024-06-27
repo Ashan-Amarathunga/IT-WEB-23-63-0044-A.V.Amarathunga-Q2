@@ -1,0 +1,168 @@
+﻿@page
+@model NEXSUS.Pages.cources.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/dem02.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="~/css/studentRegister.css">
+    <link rel="stylesheet" type="text/css" href="~/css/addcourse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+
+        <div class="main-heading">
+            <span>ADD COURCE INFORMATION</span>
+            <h1><span>HERE</span></h1>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-container">
+                <div class="section-form2">
+                    <fieldset class="section-feildset1">
+                        <div class="heading1">
+                            <a>
+                                <span>
+                                    Please add the course details accurately, ensuring all required fields are filled.
+                                    Your precision helps maintain the quality of our student management system
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="forms2">
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><span><b><i class="fa-regular fa-user fa-lg" style="color: #000000;"></i> Lecturer Name</b></span></legend>
+                                    <input asp-for="Course.LecturerName" type="text" class="input-feild" id="name">
+                                    <span asp-validation-for="Course.LecturerName" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><b><i class="fa-regular fa-calendar fa-lg" style="color: #000000;"></i> Date of birth</b></legend>
+                                    <input type="text" class="input-feild" id="DO">
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><b><i class="fa-solid fa-phone" style="color: #000000;"></i> Phone number</b></legend>
+                                    <input asp-for="Course.Number" type="text" class="input-feild" id="num">
+                                    <span asp-validation-for="Course.Number" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><b><i class="fa-regular fa-envelope fa-lg" style="color: #000000;"></i> Email Address</b></legend>
+                                    <input asp-for="Course.EmailAddress" type="email" class="input-feild" id="email">
+                                    <span asp-validation-for="Course.EmailAddress" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><b><i class="fa-solid fa-id-card fa-lg" style="color: #000000;"></i> city</b></legend>
+                                    <input asp-for="Course.City" type="text" class="input-feild" id="idn">
+                                    <span asp-validation-for="Course.City" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <div><label><b> Gender</b></label></div>
+                                <div class="section-radio">
+                                    <div style="display: flex;">
+                                        <label>Male</label>
+                                        <input type="radio" style="margin-left:20px">
+                                    </div>
+                                    <div style="display: flex;margin-left:10px">
+                                        <label>Female</label>
+                                        <input type="radio" class="input-feild" id="idn" value="Female" style="margin-left:20px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <fieldset class="feildset2">
+                                    <legend><b><i class="fa-regular fa-calendar-days fa-lg" style="color: #000000;"></i> Joined year</b></legend>
+                                    <input asp-for="Course.JoinedYear" type="text" class="input-feild" id="idn">
+                                    <span asp-validation-for="Course.JoinedYear" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="section-form2">
+
+                    <fieldset class="section-feildset2">
+                        <div class="heading1">
+                            <div class="icon-head">
+                                <i class="fa-regular fa-thumbs-up fa-2xl" style="color: #ff8800;"></i>
+                                <a><span>Enter course details carefully to ensure accuracy and completeness for our student management system</span></a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <fieldset class="feildset2" style="margin-top:30px">
+                                <legend><b><i class="fa-regular fa-calendar fa-lg" style="color: #000000;"></i> Academic level</b></legend>
+                                <input asp-for="Course.AcademicLevel" type="text" class="input-feild" id="DO">
+                                <span asp-validation-for="Course.AcademicLevel" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+
+                        <div class="box">
+                            <fieldset class="feildset2" style="margin-top:20px">
+                                <legend><b> cource ID</b></legend>
+                                <input type="text" class="input-feild" id="DO">
+                            </fieldset>
+                        </div>
+
+                        <div class="box">
+                            <div><label><b><i class="fa-brands fa-discourse fa-lg" style="color: #ff9214;"></i> enter the cource lectured</b></label></div>
+                            <fieldset class="feildset2" style="margin-top:5px">
+                                <input asp-for="Course.CourseName" type="text" class="input-feild" id="DO">
+                                <span asp-validation-for="Course.CourseName" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="section-feildset3">
+
+                        <div class="payment">
+                            <h2><i class="fa-regular fa-credit-card fa-lg" style="color: #ffa200;"></i> Additional Information</h2>
+                        </div>
+
+                        <div class="heading1">
+                            <a>
+                                <span>
+                                    Ensure the course information aligns with our university's academic standards and guidelines for quality education
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="box" style="margin-top:40px;margin-left:35px;justify-content:center">
+                            <button type="submit" class="submit">Enter Information</button>
+                        </div>
+                        <div>
+                            <a asp-page="Index">Back to List</a>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

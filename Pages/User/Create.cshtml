@@ -1,0 +1,85 @@
+﻿@page
+@model NEXSUS.Pages.User.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/dem02.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="~/css/studentRegister.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="section-form">
+            <fieldset class="section-feildset">
+                <div class="heading">
+                    <a><span>NEXSUS</span>EDU.</a>
+                </div>
+                <div class="heading2">
+                    <a><span>NEXSUS</span>ACCOUNT</a>
+                </div>
+
+                <div class="forms">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="box">
+                            <fieldset class="feildset1">
+                                <legend><span><b>Full Name</b></span></legend>
+                                <input asp-for="Student.Name" type="text" class="input-feild" id="name">
+                                <span asp-validation-for="Student.Name" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+
+                        <div>
+                            <div class="box">
+                                <fieldset class="feildset1">
+                                    <legend><span><b>Phone Number</b></span></legend>
+                                    <input asp-for="Student.PhoneNumber" type="text" class="input-feild" id="DO">
+                                    <span asp-validation-for="Student.PhoneNumber" class="text-danger"></span>
+
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset1">
+                                    <legend><span><b>Student ID</b></span></legend>
+                                    <input type="text" class="input-feild" id="num">
+
+                                </fieldset>
+                            </div>
+                            <div class="box">
+                                <fieldset class="feildset1">
+                                    <legend><span><b>Email Address</b></span></legend>
+                                    <input asp-for="Student.Email" type="email" class="input-feild" id="email">
+                                    <span asp-validation-for="Student.Email" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <button type="submit" class="submit">Register Now</button>
+                        </div>
+
+                        <div class="top">
+                            <span> Back to  <a asp-page="Index">List</a></span>
+                        </div>
+                    </form>
+                </div>
+            </fieldset>
+        </div>
+        <br><br>
+    </section>
+</body>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

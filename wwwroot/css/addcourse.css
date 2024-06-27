@@ -1,0 +1,323 @@
+﻿
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.section-form2 {
+    max-width: 100%;
+    align-items: left;
+    justify-content: left;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    flex: 1;
+}
+
+.section-feildset1 {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #ffffff;
+    max-width: 460px;
+    background-color: white;
+    padding: 20px
+}
+
+.main-heading {
+    margin-top: 10px;
+}
+
+    .main-heading span {
+        color: black;
+        font-family: "Mukta", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-left: 80px;
+        font-size: 28px;
+    }
+
+    .main-heading h1 span {
+        color: black;
+        font-family: "Mukta", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-left: 80px;
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+
+.heading1 a span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.forms2 {
+    gap: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.feildset2 {
+    position: relative;
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+    .feildset2 legend {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: transparent;
+        padding: 0 5px;
+        font-size: 13px;
+        z-index: 1;
+    }
+
+        .feildset2 legend span {
+            background-color: white;
+            padding: 0 5px;
+        }
+
+.section-radio {
+    display: flex;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.section-feildset2 {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #ffffff;
+    padding-bottom: 150px;
+    max-width: 560px;
+    background-color: white;
+    height: 390px;
+    align-content: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.section-feildset3 {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #ffffff;
+    padding-bottom: 150px;
+    max-width: 560px;
+    background-color: white;
+    height: 300px;
+    align-content: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.icon-head {
+    display: flex;
+    gap: 15px
+}
+
+.box label {
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+}
+
+.section-radio1 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.section-list {
+    list-style: none;
+    gap: 5px;
+}
+
+.payment {
+    font-family: "Mukta", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+    .payment h2 {
+        font-family: "Mukta", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 25px
+    }
+
+.section-list li label {
+    padding-left: 8px;
+}
+
+.input-feild1 {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #b3b2b2;
+    margin-top: 10px;
+    padding-right: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.input-feild2 {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #b3b2b2;
+    margin-top: 10px;
+    padding-right: 50px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 1500px) and (min-width: 901px) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .section-feildset1 {
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        border: 1px solid #ffffff;
+        padding-bottom: 50px;
+        max-width: 460px;
+        background-color: white;
+        margin-left: 50px;
+        padding: 40px;
+        padding-top: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .section-feildset2 {
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+        padding-bottom: 150px;
+        max-width: 460px;
+        padding-top: 20px;
+        background-color: white;
+        height: 400px;
+        align-content: center;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .main-heading span {
+        color: black;
+        font-family: "Mukta", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-left: 15px;
+        font-size: 17px;
+    }
+
+    .main-heading h1 span {
+        color: black;
+        font-family: "Mukta", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-left: 15px;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .section-feildset2 {
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+        padding-bottom: 150px;
+        max-width: 460px;
+        padding-top: 20px;
+        background-color: white;
+        height: 400px;
+        align-content: center;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .section-feildset3 {
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+        padding-bottom: 150px;
+        max-width: 460px;
+        padding-top: 20px;
+        background-color: white;
+        height: 400px;
+        align-content: center;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+}

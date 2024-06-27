@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NEXSUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/dem02.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav_header">
+            <div class="nav_logo">
+                <a data-aos="zoom-in-left" data-aos-delay="300" asp-area="" asp-page="/Index">Nexsus<span>Edu.</span></a>
+            </div>
+            <div class="nav_menu_item" id="menu-btn">
+                <span><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+        <ul class="nav_links" id="nav-links" data-aos="zoom-in-left" data-aos-delay="300">
+            <li><a><i class="fa-solid fa-book fa-lg" style="color: #ff9d5c;"></i> LEARN</a></li>
+            <li><a><i class="fa-solid fa-gear fa-lg" style="color: #ff9d5c;"></i> SERVICE</a></li>
+            <li><a><i class="fa-solid fa-book-open fa-lg" style="color: #ff9d5c;"></i> RESEARCH</a></li>
+            <li><a><i class="fa-regular fa-building fa-lg" style="color: #ff9d5c;"></i> ENTERPRICE</a></li>
+        </ul>
+        <div class="nav_btns">
+            <button class="btn sign_up"><a asp-area="" asp-page="/cources/Create">Cources</a></button>
+            <button class="btn sign_in"><a asp-area="" asp-page="/user/Create">Apply</a></button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script>
+        const meubtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        const menubtnicon = document.querySelector("i");
+
+        meubtn.addEventListener("click", (e) => {
+            navLinks.classList.toggle("open");
+
+            const isopen = navLinks.classList.contains("open");
+            menubtnicon.setAttribute("class", isopen ? "fa fa-bars" : "fa fa-bars")
+        });
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
