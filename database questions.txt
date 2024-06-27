@@ -1,0 +1,22 @@
+-- question 1
+
+SELECT *
+FROM student;
+
+-- question 2
+
+SELECT StudentID, StudentName, city
+FROM student
+WHERE city LIKE '%kandy%';
+
+-- question 3
+
+UPDATE student
+SET city = 'Galle'
+WHERE StudentID = '4';
+
+--question 4
+
+SELECT s.StudentID, s.StudentName, s.city, s.CourseID, c.Name
+FROM student AS s
+JOIN Course AS c ON c.CourseID = s.CourseID;
